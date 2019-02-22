@@ -1,4 +1,5 @@
 class ContactsList:
+    """The contact list section of a quilted resume,contains contact objects"""
     def __init__(self):
         self.contacts = []
 

@@ -4,6 +4,12 @@ from pyquilted.quilted.style import Style
 
 
 class Resume:
+    """The quilted resume object
+
+       This object contains a heading, contact list and all section
+       list of a resume. The content sections are sorted in order they
+       appear in the data.
+    """
     def __init__(self, heading=None, contacts=None, sections=None, style=None):
         self.heading = heading
         self.contacts = contacts or []

@@ -2,6 +2,12 @@ from pyquilted.quilted.section import Section
 
 
 class Work(Section):
+    """The work section in a quilted resume
+
+       The work object is a complex section. It contains blocks of jobs
+       and optionally a list of slugs. As a section it mixes in the
+       sectionable functionality.
+    """
     def __init__(self, blocks=None, slugs=None, icon=None):
         self.label = 'Work'
         self.icon = icon or 'fa-briefcase'
@@ -15,6 +21,7 @@ class Work(Section):
 
 
 class Job:
+    """The job block in the work section"""
     def __init__(self, dates=None, location=None, company=None, title=None,
                  slugs=None, **kwargs):
         self.dates = dates
@@ -25,5 +32,6 @@ class Job:
 
 
 class Slugs():
+    """The additional list of slugs in the work section"""
     def __init__(self, slugs=None):
         self.blocks = slugs
