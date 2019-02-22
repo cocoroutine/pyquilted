@@ -2,6 +2,7 @@ from pyquilted.resume_to_html import ResumeToHtml
 
 
 class HtmlApp(ResumeToHtml):
+    """App to load yaml and output resume in html"""
     def __init__(self, resume_file, path, style=None, options=None):
         self.style = style
         self.options = options

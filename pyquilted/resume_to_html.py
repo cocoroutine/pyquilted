@@ -9,6 +9,7 @@ DATA_PATH = str(Path(pyquilted.__file__).resolve().parent)
 
 
 class ResumeToHtml:
+    """A mixin that mixes the functionality of converting data to resume to html"""
     def resume_to_html(self):
         self._load_yaml()
         self._build_resume()

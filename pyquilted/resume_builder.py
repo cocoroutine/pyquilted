@@ -5,6 +5,7 @@ from pyquilted.yaml_loader import YamlLoader
 
 
 class ResumeBuilder:
+    """Builder class that has the steps to create a resume from yaml"""
     def __init__(self, resume_odict, style=None, options=None):
         self.resume_odict = resume_odict
         self.resume = Resume(style=style)

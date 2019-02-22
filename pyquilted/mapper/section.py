@@ -7,6 +7,7 @@ from pyquilted.mapper.work import WorkMapper
 
 
 class SectionMapper:
+    """A data mapper object for all sections"""
     def __init__(self, key, section_odict):
         self.key = key
         self.section_odict = section_odict

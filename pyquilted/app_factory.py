@@ -5,6 +5,7 @@ from pyquilted.quilted.style import Style
 
 
 class AppFactory:
+    """App factory object that creates app objects for major cli options"""
     def __init__(self, args):
         self.args = vars(args)
         self.options = Options(**self.args)

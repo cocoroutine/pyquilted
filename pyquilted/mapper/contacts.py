@@ -3,6 +3,7 @@ from pyquilted.quilted.contacts_list import ContactsList
 
 
 class ContactsMapper:
+    """Contacts data mapper object"""
     def __init__(self, contacts_odict):
         self.contacts = ContactsList()
         self.odict = contacts_odict

@@ -67,7 +67,7 @@ style: css styles to apply to resume content
 
 ## Html
 
-If you prefer to customize the html then print using your browser you can
+If you prefer to customize the html and then print using your browser
 
 `$ pyquilted --html mysample.yml myresume.html`
 

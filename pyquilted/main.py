@@ -1,3 +1,6 @@
+"""main entry point for pyquilted"""
+
+
 from pyquilted.cli_main import CliMain
 
 

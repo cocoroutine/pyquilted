@@ -2,6 +2,7 @@ from pyquilted.quilted.heading import Heading
 
 
 class HeadingMapper:
+    """Heading data mapper object"""
     def __init__(self, odict):
         self.odict = odict
 

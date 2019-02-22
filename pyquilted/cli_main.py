@@ -4,6 +4,7 @@ from pyquilted.app_factory import AppFactory
 
 
 class CliMain:
+    """Command Line Inteface for pyquilted"""
     def __init__(self):
         self.parser = argparse.ArgumentParser(
                 prog="pyquilted",

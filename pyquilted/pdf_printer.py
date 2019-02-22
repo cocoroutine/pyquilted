@@ -2,6 +2,7 @@ import pdfkit
 
 
 class PdfPrinter:
+    """A wrapper class around pdfkit functionality to print html to pdfs"""
     @staticmethod
     def from_file(infile, outfile):
         options = {

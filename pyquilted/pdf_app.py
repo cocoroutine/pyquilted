@@ -3,6 +3,7 @@ from pyquilted.pdf_printer import PdfPrinter
 
 
 class PdfApp(ResumeToHtml):
+    """App to load yaml and print resume in pdf format"""
     def __init__(self, resume_file, path, style=None, options=None):
         self.style = style
         self.options = options
