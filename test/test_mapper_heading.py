@@ -5,7 +5,7 @@ from pyquilted.yaml_loader import YamlLoader
 
 class TestMapperHeading(unittest.TestCase):
     def test_mapper_heading(self):
-        with open('tests/validations/heading.yml') as f:
+        with open('test/validations/heading.yml') as f:
             odata = YamlLoader.ordered_load(f)
         mapper = HeadingMapper(odata['heading'])
         heading = mapper.deserialize()

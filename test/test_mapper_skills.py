@@ -5,7 +5,7 @@ from pyquilted.yaml_loader import YamlLoader
 
 class TestMapperSkills(unittest.TestCase):
     def test_mapper_skills(self):
-        with open('tests/validations/skills.yml') as f:
+        with open('test/validations/skills.yml') as f:
             data = YamlLoader.ordered_load(f)
         mapper = SkillsMapper(data['skills'])
         skills= mapper.deserialize()

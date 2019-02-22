@@ -5,7 +5,7 @@ from pyquilted.yaml_loader import YamlLoader
 
 class TestMapperContacts(unittest.TestCase):
     def test_mapper_contacts(self):
-        with open('tests/validations/contacts.yml') as f:
+        with open('test/validations/contacts.yml') as f:
             data = YamlLoader.ordered_load(f)
         mapper = ContactsMapper(data['contacts'])
         contacts = mapper.deserialize()

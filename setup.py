@@ -26,7 +26,7 @@ setup(
         install_requires=[
             'chevron',
             'pdfkit',
-            'ruamel.yaml<=0.15.37',
+            'ruamel.yaml',
             ],
         entry_points={
             'console_scripts':['pyquilted=pyquilted.main:main']
