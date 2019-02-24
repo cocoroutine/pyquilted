@@ -9,22 +9,21 @@ DATA_PATH = str(Path(pyquilted.__file__).resolve().parent)
 
 
 class ResumeToHtml:
-    """A mixin that mixes the functionality of converting data to resume to html"""
+    """A mixin that mixes the converting from data to resume to html"""
     def resume_to_html(self):
-        self._load_yaml()
-        self._build_resume()
-        self._render_html()
+        self._yaml_load()
+        self._resume_build()
+        self._html_render()
 
-    def _load_yaml(self):
+    def _yaml_load(self):
         with open(self.resume_file) as f:
             self.resume_odict = YamlLoader.ordered_load(f)
 
-    def _build_resume(self):
-        self.resume_builder = ResumeBuilder(self.resume_odict,
-                                            style=self.style,
-                                            options=self.options)
-        self.resume = self.resume_builder.build_resume()
+    def _resume_build(self):
+        builder = ResumeBuilder(self.resume_odict, style=self.style,
+                                options=self.options)
+        self.resume = builder.section_map()
 
-    def _render_html(self):
+    def _html_render(self):
         self.html = TemplateRender.render_mustache(
                 DATA_PATH + '/templates/base.mustache', self.resume)

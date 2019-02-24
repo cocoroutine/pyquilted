@@ -11,8 +11,6 @@ class TemplateRender:
     @staticmethod
     def render_mustache(template, data):
         with open(template) as f:
-            html = chevron.render(
-                    template=f,
-                    data=data,
-                    partials_path=DATA_PATH + '/templates')
+            html = chevron.render(template=f, data=data,
+                                  partials_path=DATA_PATH + '/templates')
         return html

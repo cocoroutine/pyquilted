@@ -37,11 +37,13 @@ class CliMain:
                                  dest="font_size",
                                  help="css font size for resume content")
 
-        self.args = self.parser.parse_args()
-
     def run(self):
-        app = AppFactory(self.args).create()
+        app = self._create_app()
         if app:
             app.run()
         else:
             self.parser.print_help()
+
+    def _create_app(self):
+        args = self.parser.parse_args()
+        return AppFactory(args).create()
