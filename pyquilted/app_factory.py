@@ -9,7 +9,7 @@ class AppFactory:
     def __init__(self, args):
         self.args = vars(args)
         self.options = Options(**self.args)
-        self.style = Style(**self.args)
+        self.style = vars(Style(**self.args))
 
     def create(self):
         """method that returns a different app object depending on the cli options
