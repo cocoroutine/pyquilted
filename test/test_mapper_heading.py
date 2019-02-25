@@ -4,20 +4,36 @@ from pyquilted.yaml_loader import YamlLoader
 
 
 class TestMapperHeading(unittest.TestCase):
-    def test_mapper_heading(self):
+    def setUp(self):
         with open('test/validations/heading.yml') as f:
-            odata = YamlLoader.ordered_load(f)
-        mapper = HeadingMapper(odata['heading'])
+            self.odata = YamlLoader.ordered_load(f)
+
+    def test_heading(self):
+        mapper = HeadingMapper(self.odata['heading'])
         heading = mapper.deserialize()
 
-        valid = {
-                'name': 'Jon Snow',
-                'title': 'The White Wolf',
-                'location': 'Winterfell',
-                'via': 'fa-motorcycle'
-                }
-        self.assertEqual(heading.serialize(), valid)
+        self.assertIsNotNone(heading.name)
+        self.assertIsNone(heading.primary)
+        self.assertIsNone(heading.adjacent)
 
+    def test_location(self):
+        mapper = HeadingMapper(self.odata['heading-location'])
+        heading = mapper.deserialize()
+
+        self.assertIsNotNone(heading.name)
+        self.assertIsNotNone(heading.primary)
+        self.assertIsNone(heading.adjacent)
+
+    def test_heading_simple(self):
+        mapper = HeadingMapper(self.odata['heading-simple'])
+        heading = mapper.deserialize()
+
+        self.assertIsNotNone(heading.name)
+        self.assertIsNotNone(heading.primary)
+        self.assertIsNotNone(heading.adjacent)
+
+    def test_heading_complex(self):
+        pass
 
 if __name__ == '__main__':
     unittest.main()
