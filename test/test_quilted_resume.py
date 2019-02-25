@@ -14,7 +14,11 @@ class TestResume(unittest.TestCase):
         self.assertIsInstance(resume.style, dict)
 
     def test_add_heading(self):
-        pass
+        heading = HeadingSimple(name="Jon Snow")
+        resume = Resume()
+        resume.add_section(heading)
+
+        self.assertIsNotNone(resume.heading)
 
     def test_add_contacts(self):
         email = EmailContact('jon.snow@winterfell.got')
