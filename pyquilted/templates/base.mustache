@@ -45,7 +45,7 @@
                 font-size: 140%;
                 font-weight: bold;
             }
-            .title {
+            .adjacent {
                 margin-left: 12pt;
             }
             .label-icon {
@@ -109,7 +109,12 @@
     </head>
     <body>
         <div class="resume">
-        {{>heading}}
+        {{#heading}}
+
+        {{#heading-simple}}{{>heading-simple}}{{/heading-simple}}
+
+        {{/heading}}
+
 
         {{#sections}}
 

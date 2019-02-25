@@ -11,4 +11,6 @@ class HeadingSimple:
         self.primary = primary
 
     def serialize(self):
-        return vars(self)
+        section = dict()
+        section['heading-simple'] = vars(self)
+        return section

@@ -1,6 +1,6 @@
 class Detail:
     def serialize(self):
-        name = self.__class__.__name__ + '_detail'
+        name = self.__class__.__name__ + '-detail'
         detail = dict()
         detail[name.lower()] = vars(self)
         return detail
@@ -9,7 +9,7 @@ class Detail:
 class Location(Detail):
     def __init__(self, location=None, via=None, **kwargs):
         self.location = location
-        self.via = via
+        self.via = 'fa-' + via
 
 
 class Flair(Detail):

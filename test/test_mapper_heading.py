@@ -27,6 +27,7 @@ class TestMapperHeading(unittest.TestCase):
     def test_heading_simple(self):
         mapper = HeadingMapper(self.odata['heading-simple'])
         heading = mapper.deserialize()
+        print(vars(heading))
 
         self.assertIsNotNone(heading.name)
         self.assertIsNotNone(heading.primary)
