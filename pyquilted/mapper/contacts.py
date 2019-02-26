@@ -1,4 +1,4 @@
-from pyquilted.quilted.contacts import *
+from pyquilted.quilted.contact_factory import ContactFactory
 from pyquilted.quilted.contacts_list import ContactsList
 
 

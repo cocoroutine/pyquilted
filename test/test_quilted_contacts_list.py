@@ -1,5 +1,5 @@
 import unittest
-from pyquilted.quilted.contacts import *
+from pyquilted.quilted.contact import *
 from pyquilted.quilted.contacts_list import ContactsList
 
 
