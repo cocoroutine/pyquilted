@@ -1,5 +1,5 @@
 import unittest
-from pyquilted.mapper.heading_details import HeadingDetailsMapper
+from pyquilted.mapper.details import HeadingDetailsMapper
 from pyquilted.yaml_loader import YamlLoader
 
 

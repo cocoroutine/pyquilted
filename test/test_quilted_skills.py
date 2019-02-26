@@ -11,8 +11,8 @@ class TestSkills(unittest.TestCase):
         valid = {
                 "skills": {
                     "label": "Skills",
-                    "value": "Brooding, Knowing-nothing, Leadership,\
-                            Swooning, Swordsmanship, HTML",
+                    "value": "Brooding, Knowing-nothing, Leadership, " \
+                            "Swooning, Swordsmanship, HTML",
                     "icon": "fa-wrench"
                     }
                 }
