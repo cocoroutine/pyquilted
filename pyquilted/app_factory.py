@@ -12,7 +12,7 @@ class AppFactory:
         self.style = vars(Style(**self.args))
 
     def create(self):
-        """method that returns a different app object depending on the cli options
+        """returns a different app object depending on the cli options
 
            Returns:
                app: app object with a run method
@@ -22,10 +22,10 @@ class AppFactory:
             app = SampleApp('/sample/resume.yml', self.options.sample)
         elif self.options.html:
             app = HtmlApp(self.options.html[0], self.options.html[1],
-                    style=self.style)
+                          style=self.style)
         elif self.options.pdf:
             app = PdfApp(self.options.pdf[0], self.options.pdf[1],
-                    style=self.style)
+                         style=self.style)
         return app
 
 

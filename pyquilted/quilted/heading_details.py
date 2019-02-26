@@ -6,7 +6,8 @@ class HeadingDetails:
        It is semi-ordered in that title, location and flair can be in
        any order.
     """
-    def __init__(self, name=None, an_objective=None, the_details=None, **kwargs):
+    def __init__(self, name=None, an_objective=None, the_details=None,
+                 **kwargs):
         self.name = name
         self.objective = an_objective
         self.details = the_details or []

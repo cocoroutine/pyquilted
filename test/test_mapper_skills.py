@@ -8,12 +8,13 @@ class TestMapperSkills(unittest.TestCase):
         with open('test/validations/skills.yml') as f:
             data = YamlLoader.ordered_load(f)
         mapper = SkillsMapper(data['skills'])
-        skills= mapper.deserialize()
+        skills = mapper.deserialize()
 
         valid = {
                 "skills": {
                     "label": "Skills",
-                    "value": "Bravery, Leadership, Swordsmanship, Brooding, Knowing-nothing, HTML",
+                    "value": "Bravery, Leadership, Swordsmanship,\
+                            Brooding, Knowing-nothing, HTML",
                     "icon": "fa-wrench"
                     }
                 }

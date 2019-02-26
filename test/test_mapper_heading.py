@@ -35,5 +35,6 @@ class TestMapperHeading(unittest.TestCase):
     def test_heading_complex(self):
         pass
 
+
 if __name__ == '__main__':
     unittest.main()

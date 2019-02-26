@@ -1,4 +1,4 @@
-from pyquilted.mapper.heading_details import HeadingDetailsMapper
+from pyquilted.mapper.details import HeadingDetailsMapper
 from pyquilted.quilted.heading_simple import HeadingSimple
 
 

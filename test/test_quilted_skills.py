@@ -4,14 +4,15 @@ from pyquilted.quilted.skills import Skills
 
 class TestSkills(unittest.TestCase):
     def test_skills(self):
-        skills= Skills([
+        skills = Skills([
             'Brooding', 'Knowing-nothing', 'Leadership', 'Swooning',
-            'Swordsmanship','HTML' ])
+            'Swordsmanship', 'HTML'])
 
         valid = {
                 "skills": {
                     "label": "Skills",
-                    "value": "Brooding, Knowing-nothing, Leadership, Swooning, Swordsmanship, HTML",
+                    "value": "Brooding, Knowing-nothing, Leadership,\
+                            Swooning, Swordsmanship, HTML",
                     "icon": "fa-wrench"
                     }
                 }
