@@ -2,7 +2,7 @@ import unittest
 from pyquilted.quilted.section import Section
 
 
-class MockCompound(Section):
+class MyMockCompoundClass(Section):
     def __init__(self):
         self.one = 1
 
@@ -18,12 +18,13 @@ class TestSection(unittest.TestCase):
         self.assertEqual(mock._kebab_name(), 'mock')
 
     def test_kebab_compound(self):
-        mock = MockCompound()
-        self.assertEqual(mock._kebab_name(), 'mock-compound')
+        mock = MyMockCompoundClass()
+        self.assertEqual(mock._kebab_name(), 'my-mock-compound-class')
 
     def test_serialize(self):
-        mock = MockCompound()
+        mock = Mock()
         self.assertTrue(isinstance(mock.serialize(), dict))
+
 
 if __name__ == '__main__':
     unittest.main()
