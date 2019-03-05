@@ -1,4 +1,5 @@
 from pyquilted.mapper.details import HeadingDetailsMapper
+from pyquilted.quilted.heading_complex import HeadingComplex
 from pyquilted.quilted.heading_simple import HeadingSimple
 
 
@@ -16,7 +17,30 @@ class HeadingMapper:
         return self.section
 
     def _build_heading_complex(self):
-        pass
+        if self.heading.objective and len(self.heading.details) == 3:
+            self.section = HeadingComplex(name=self.heading.name,
+                                          primary=self.heading.objective,
+                                          adjacent=self.heading.details[0],
+                                          top_side=self.heading.details[1],
+                                          bottom_side=self.heading.details[2]
+                                          )
+        elif self.heading.objective and len(self.heading.details) == 2:
+            self.section = HeadingComplex(name=self.heading.name,
+                                          primary=self.heading.objective,
+                                          top_side=self.heading.details[0],
+                                          bottom_side=self.heading.details[1]
+                                          )
+        elif self.heading.objective and len(self.heading.details) == 1:
+            self.section = HeadingComplex(name=self.heading.name,
+                                          primary=self.heading.objective,
+                                          top_side=self.heading.details[0]
+                                          )
+        else:
+            self.section = HeadingComplex(name=self.heading.name,
+                                          primary=self.heading.details[0],
+                                          top_side=self.heading.details[1],
+                                          bottom_side=self.heading.details[2]
+                                          )
 
     def _build_heading_simple(self):
         if len(self.heading.details) == 2:

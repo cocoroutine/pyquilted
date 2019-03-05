@@ -9,3 +9,4 @@ class Style:
         self.font_other = font_other or font_main \
             or "verdana, arial, sans-serif"
         self.font_size = font_size or "10pt"
+        self.heading_complex = False
