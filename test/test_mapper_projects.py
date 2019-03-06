@@ -16,7 +16,7 @@ class TestMapperProjects(unittest.TestCase):
                     'icon': 'fa-code',
                     'blocks': [{
                         'name': 'Wight Hunt',
-                        'description': 'Lead a small team north to '\
+                        'description': 'Lead a small team north to '
                                 'capture a wight alive',
                         'flair': 'S7E06 Beyond the Wall',
                         'flair_icon': 'fa-film',

@@ -9,7 +9,6 @@ class TestHeadingComplex(unittest.TestCase):
                                  primary="Seeking to destroy my enemies",
                                  top_side="Greater Boston",
                                  bottom_side="cocoroutine")
-
         valid = {
                 "heading-complex": {
                     "name": "Jon Snow",
@@ -19,10 +18,8 @@ class TestHeadingComplex(unittest.TestCase):
                     "bottom_side": "cocoroutine"
                     }
                 }
-
         self.assertEqual(heading.serialize(), valid)
 
 
 if __name__ == '__main__':
     unittest.main()
-

@@ -13,8 +13,8 @@ class TestMapperSkills(unittest.TestCase):
         valid = {
                 "skills": {
                     "label": "Skills",
-                    "value": "Bravery, Leadership, Swordsmanship, "\
-                            "Brooding, Knowing-nothing, HTML",
+                    "value": "Bravery, Leadership, Swordsmanship, "
+                             "Brooding, Knowing-nothing, HTML",
                     "icon": "fa-wrench"
                     }
                 }
