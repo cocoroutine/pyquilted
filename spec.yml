@@ -22,10 +22,10 @@ mapping:
             "flair":
                 type: map
                 required: false
-            "flair-icon":
+            "flair_icon":
                 type: map
                 required: false
-            "flair-link":
+            "flair_link":
                 type: map
                 required: false
     "summary":
@@ -47,10 +47,10 @@ mapping:
             type: map
             required: true 
             mapping:
-                "date-start":
+                "date_start":
                     type: date
                     required: true
-                "date-end":
+                "date_end":
                     type: date
                     required: true
                 "dates":
@@ -86,10 +86,10 @@ mapping:
                 "flair":
                     type: str
                     required: false 
-                "flair-icon":
+                "flair_icon":
                     type: str
                     required: false
-                "flair-link":
+                "flair_link":
                     type: str
                     required: false
                 "slugs":
