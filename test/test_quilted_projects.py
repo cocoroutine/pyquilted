@@ -10,6 +10,7 @@ class TestProjects(unittest.TestCase):
                                "wight alive",
                 "flair": "S7E06 Beyond the Wall",
                 "flair_icon": "fa-film",
+                "flair_link": "http://example.com",
                 "slugs": ["Mission complete", "Saved by my uncle"]
                 }
         activity = Activity(**data)
@@ -25,6 +26,7 @@ class TestProjects(unittest.TestCase):
                                        "capture a wight alive",
                         "flair": "S7E06 Beyond the Wall",
                         "flair_icon": "fa-film",
+                        "flair_link": "http://example.com",
                         "slugs": ["Mission complete", "Saved by my uncle"]
                     }]
                 }}

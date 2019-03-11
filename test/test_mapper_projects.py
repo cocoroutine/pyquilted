@@ -20,6 +20,7 @@ class TestMapperProjects(unittest.TestCase):
                                 'capture a wight alive',
                         'flair': 'S7E06 Beyond the Wall',
                         'flair_icon': 'fa-film',
+                        'flair_link': None,
                         'slugs': ['Mission complete', 'Saved by my uncle']
                     }]
                 }}
