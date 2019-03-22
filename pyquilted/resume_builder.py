@@ -1,5 +1,4 @@
 from pyquilted.quilted.resume import Resume
-from pyquilted.quilted.style import Style
 from pyquilted.mapper.section import SectionMapper
 
 
