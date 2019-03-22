@@ -22,6 +22,10 @@ class CliMain:
                                  dest='sample',
                                  help="generate sample resume in yaml")
 
+        self.parser.add_argument('--heading', metavar='compact|complex|auto',
+                                 nargs=1, dest='heading', default='auto',
+                                 help="force a heading type; defaults to auto")
+
         style_group = self.parser.add_argument_group(
                 'style',
                 "css styles to apply to resume content")
