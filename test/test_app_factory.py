@@ -19,7 +19,7 @@ class TestAppFactory(unittest.TestCase):
 
         self.assertTrue(isinstance(factory.args, dict))
         self.assertTrue(isinstance(factory.style, dict))
-        self.assertTrue(isinstance(factory.options, Options))
+        self.assertTrue(isinstance(factory.options, AppOptions))
 
         self.assertTrue(inspect.ismethod(factory.create))
 

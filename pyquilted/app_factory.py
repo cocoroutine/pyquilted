@@ -9,7 +9,7 @@ class AppFactory:
     """App factory object that creates app objects for major cli options"""
     def __init__(self, args):
         self.args = vars(args)
-        self.options = Options(**self.args)
+        self.options = AppOptions(**self.args)
         self.section_options = SectionOptions(**self.args)
         self.style = vars(Style(**self.args))
 
@@ -31,7 +31,7 @@ class AppFactory:
         return app
 
 
-class Options:
+class AppOptions:
     """pyquilted options settings"""
     def __init__(self, pdf=None, html=None, sample=None, **kwargs):
         self.pdf = pdf
