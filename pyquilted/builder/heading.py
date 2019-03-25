@@ -1,12 +1,12 @@
-from pyquilted.builder.details import HeadingDetailsMapper
+from pyquilted.builder.details import HeadingDetailsBuilder
 from pyquilted.quilted.heading_complex import HeadingComplex
 from pyquilted.quilted.heading_simple import HeadingSimple
 
 
-class HeadingMapper:
+class HeadingBuilder:
     """Heading data mapper object"""
     def __init__(self, odict):
-        self.heading = HeadingDetailsMapper(odict).deserialize()
+        self.heading = HeadingDetailsBuilder(odict).deserialize()
         self.section = None
 
     def deserialize(self):

@@ -1,13 +1,13 @@
 import unittest
-from pyquilted.builder.work import WorkMapper
+from pyquilted.builder.work import WorkBuilder
 from pyquilted.yaml_loader import YamlLoader
 
 
-class TestMapperWork(unittest.TestCase):
+class TestBuilderWork(unittest.TestCase):
     def test_mapper_work(self):
         with open('test/validations/work.yml') as f:
             data = YamlLoader.ordered_load(f)
-        mapper = WorkMapper(data['work'])
+        mapper = WorkBuilder(data['work'])
         work = mapper.deserialize()
 
         valid = {

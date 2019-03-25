@@ -1,13 +1,13 @@
 import unittest
-from pyquilted.builder.skills import SkillsMapper
+from pyquilted.builder.skills import SkillsBuilder
 from pyquilted.yaml_loader import YamlLoader
 
 
-class TestMapperSkills(unittest.TestCase):
+class TestBuilderSkills(unittest.TestCase):
     def test_mapper_skills(self):
         with open('test/validations/skills.yml') as f:
             data = YamlLoader.ordered_load(f)
-        mapper = SkillsMapper(data['skills'])
+        mapper = SkillsBuilder(data['skills'])
         skills = mapper.deserialize()
 
         valid = {

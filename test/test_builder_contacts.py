@@ -1,13 +1,13 @@
 import unittest
-from pyquilted.builder.contacts import ContactsMapper
+from pyquilted.builder.contacts import ContactsBuilder
 from pyquilted.yaml_loader import YamlLoader
 
 
-class TestMapperContacts(unittest.TestCase):
+class TestBuilderContacts(unittest.TestCase):
     def test_mapper_contacts(self):
         with open('test/validations/contacts.yml') as f:
             data = YamlLoader.ordered_load(f)
-        mapper = ContactsMapper(data['contacts'])
+        mapper = ContactsBuilder(data['contacts'])
         contacts = mapper.deserialize()
 
         valid = [

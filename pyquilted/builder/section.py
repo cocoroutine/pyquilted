@@ -1,12 +1,12 @@
-from pyquilted.builder.contacts import ContactsMapper
-from pyquilted.builder.education import EducationMapper
-from pyquilted.builder.heading import HeadingMapper
-from pyquilted.builder.projects import ProjectsMapper
-from pyquilted.builder.skills import SkillsMapper
-from pyquilted.builder.work import WorkMapper
+from pyquilted.builder.contacts import ContactsBuilder
+from pyquilted.builder.education import EducationBuilder
+from pyquilted.builder.heading import HeadingBuilder
+from pyquilted.builder.projects import ProjectsBuilder
+from pyquilted.builder.skills import SkillsBuilder
+from pyquilted.builder.work import WorkBuilder
 
 
-class SectionMapper:
+class SectionBuilder:
     """A data mapper object for all sections"""
     def __init__(self, key, section_odict, options=None):
         self.key = key
@@ -22,17 +22,17 @@ class SectionMapper:
 
     def _create_mapper(self):
         if self.key in 'contacts':
-            self.mapper = ContactsMapper(self.section_odict)
+            self.mapper = ContactsBuilder(self.section_odict)
         elif self.key in 'education':
-            self.mapper = EducationMapper(self.section_odict)
+            self.mapper = EducationBuilder(self.section_odict)
         elif self.key in 'heading':
-            self.mapper = HeadingMapper(self.section_odict)
+            self.mapper = HeadingBuilder(self.section_odict)
         elif self.key in 'projects':
-            self.mapper = ProjectsMapper(self.section_odict)
+            self.mapper = ProjectsBuilder(self.section_odict)
         elif self.key in 'skills':
-            self.mapper = SkillsMapper(self.section_odict)
+            self.mapper = SkillsBuilder(self.section_odict)
         elif self.key in 'work':
-            self.mapper = WorkMapper(self.section_odict)
+            self.mapper = WorkBuilder(self.section_odict)
 
 
 class SectionOptions:

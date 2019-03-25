@@ -3,7 +3,7 @@ from pyquilted.quilted.detail import Objective
 from pyquilted.quilted.heading_details import HeadingDetails
 
 
-class HeadingDetailsMapper:
+class HeadingDetailsBuilder:
     def __init__(self, odict):
         self.odict = odict
         self.heading_details = HeadingDetails(**odict)

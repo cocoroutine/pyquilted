@@ -1,7 +1,7 @@
 from pyquilted.quilted.work import *
 
 
-class WorkMapper:
+class WorkBuilder:
     """Work data mapper object"""
     def __init__(self, work_odict):
         self.work = Work()

@@ -1,7 +1,7 @@
 from pyquilted.quilted.projects import *
 
 
-class ProjectsMapper:
+class ProjectsBuilder:
     """Projects data mapper object"""
     def __init__(self, projects_odict):
         self.projects = Projects()

@@ -1,13 +1,13 @@
 import unittest
-from pyquilted.builder.projects import ProjectsMapper
+from pyquilted.builder.projects import ProjectsBuilder
 from pyquilted.yaml_loader import YamlLoader
 
 
-class TestMapperProjects(unittest.TestCase):
+class TestBuilderProjects(unittest.TestCase):
     def test_mapper_projects(self):
         with open('test/validations/projects.yml') as f:
             data = YamlLoader.ordered_load(f)
-        mapper = ProjectsMapper(data['projects'])
+        mapper = ProjectsBuilder(data['projects'])
         projects = mapper.deserialize()
 
         valid = {

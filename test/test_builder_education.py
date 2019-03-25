@@ -1,13 +1,13 @@
 import unittest
-from pyquilted.builder.education import EducationMapper
+from pyquilted.builder.education import EducationBuilder
 from pyquilted.yaml_loader import YamlLoader
 
 
-class TestMapperEducation(unittest.TestCase):
+class TestBuilderEducation(unittest.TestCase):
     def test_mapper_education(self):
         with open('test/validations/education.yml') as f:
             odata = YamlLoader.ordered_load(f)
-        mapper = EducationMapper(odata['education'])
+        mapper = EducationBuilder(odata['education'])
         education = mapper.deserialize()
 
         valid = {
