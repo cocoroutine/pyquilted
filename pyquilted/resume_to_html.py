@@ -1,6 +1,6 @@
 from pathlib import Path
 import pyquilted
-from pyquilted.resume_builder import ResumeBuilder
+from pyquilted.builder.resume import ResumeBuilder
 from pyquilted.template_render import TemplateRender
 from pyquilted.yaml_loader import YamlLoader
 

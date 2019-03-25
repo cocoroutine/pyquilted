@@ -1,6 +1,6 @@
 import inspect
 import unittest
-from pyquilted.resume_builder import ResumeBuilder
+from pyquilted.builder.resume import ResumeBuilder
 
 
 class TestResumeBuilder(unittest.TestCase):
