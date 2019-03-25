@@ -1,6 +1,7 @@
 from pyquilted.html_app import HtmlApp
 from pyquilted.pdf_app import PdfApp
 from pyquilted.sample_app import SampleApp
+from pyquilted.mapper.section import SectionOptions
 from pyquilted.quilted.style import Style
 
 
@@ -9,6 +10,7 @@ class AppFactory:
     def __init__(self, args):
         self.args = vars(args)
         self.options = Options(**self.args)
+        self.section_options = SectionOptions(**self.args)
         self.style = vars(Style(**self.args))
 
     def create(self):
@@ -22,10 +24,10 @@ class AppFactory:
             app = SampleApp('/sample/resume.yml', self.options.sample)
         elif self.options.html:
             app = HtmlApp(self.options.html[0], self.options.html[1],
-                          style=self.style)
+                          style=self.style, options=self.section_options)
         elif self.options.pdf:
             app = PdfApp(self.options.pdf[0], self.options.pdf[1],
-                         style=self.style)
+                         style=self.style, options=self.section_options)
         return app
 
 
