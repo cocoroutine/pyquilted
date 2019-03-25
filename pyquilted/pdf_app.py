@@ -4,9 +4,9 @@ from pyquilted.pdf_printer import PdfPrinter
 
 class PdfApp(ResumeToHtml):
     """App to load yaml and print resume in pdf format"""
-    def __init__(self, resume_file, path, style=None, options=None):
-        self.style = style
-        self.options = options
+    def __init__(self, resume_file, path, style_options=None, section_options=None):
+        self.style_options = style_options
+        self.section_options = section_options
         self.resume_file = resume_file
         self.path = path
 
