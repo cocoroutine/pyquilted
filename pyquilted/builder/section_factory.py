@@ -6,7 +6,7 @@ from pyquilted.builder.skills import SkillsBuilder
 from pyquilted.builder.work import WorkBuilder
 
 
-class SectionBuilder:
+class SectionBuilderFactory:
     """A data mapper object for all sections"""
     def __init__(self, key, section_odict, options=None):
         self.key = key

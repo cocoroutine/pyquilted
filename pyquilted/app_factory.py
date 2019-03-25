@@ -1,7 +1,7 @@
 from pyquilted.html_app import HtmlApp
 from pyquilted.pdf_app import PdfApp
 from pyquilted.sample_app import SampleApp
-from pyquilted.builder.section import SectionOptions
+from pyquilted.builder.section_factory import SectionOptions
 from pyquilted.quilted.style import Style
 
 

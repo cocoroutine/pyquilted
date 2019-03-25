@@ -1,5 +1,5 @@
 from pyquilted.quilted.resume import Resume
-from pyquilted.builder.section import SectionBuilder
+from pyquilted.builder.section_factory import SectionBuilderFactory
 
 
 class ResumeBuilder:
@@ -11,6 +11,6 @@ class ResumeBuilder:
 
     def section_map(self):
         for key, val in self.resume_odict.items():
-            mapper = SectionBuilder(key, val, options=self.section_options)
-            self.resume.add_section(mapper.create_section())
+            builder = SectionBuilderFactory(key, val, options=self.section_options)
+            self.resume.add_section(builder.create_section())
         return self.resume
