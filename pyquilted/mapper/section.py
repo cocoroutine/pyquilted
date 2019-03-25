@@ -8,9 +8,10 @@ from pyquilted.mapper.work import WorkMapper
 
 class SectionMapper:
     """A data mapper object for all sections"""
-    def __init__(self, key, section_odict):
+    def __init__(self, key, section_odict, options=None):
         self.key = key
         self.section_odict = section_odict
+        self.options = options or SectionOptions()
         self.mapper = None
         self.section = None
 
@@ -32,3 +33,9 @@ class SectionMapper:
             self.mapper = SkillsMapper(self.section_odict)
         elif self.key in 'work':
             self.mapper = WorkMapper(self.section_odict)
+
+
+class SectionOptions:
+    """section builder options for the formatting of the sections"""
+    def __init__(self, heading=None, **kwargs):
+        self.heading = heading or "auto"
