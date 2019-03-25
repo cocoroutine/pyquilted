@@ -1,4 +1,4 @@
-class Style:
+class StyleOptions:
     """A style object that contains css options for the look of the resume"""
     def __init__(self, height="9in", width="6in", name_color=None,
                  font_main=None, font_other=None, font_size=None, **kwargs):

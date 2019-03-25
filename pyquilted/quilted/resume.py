@@ -1,7 +1,7 @@
 from pyquilted.quilted.heading_complex import HeadingComplex
 from pyquilted.quilted.heading_simple import HeadingSimple
 from pyquilted.quilted.contacts_list import ContactsList
-from pyquilted.quilted.style import Style
+from pyquilted.quilted.style_options import StyleOptions
 
 
 class Resume:
@@ -15,7 +15,7 @@ class Resume:
         self.heading = heading
         self.contacts = contacts or []
         self.sections = sections or []
-        self.style = style or vars(Style())
+        self.style = style or vars(StyleOptions())
 
     def add_section(self, section):
         if type(section) is HeadingComplex:

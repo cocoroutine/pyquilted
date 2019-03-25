@@ -1,7 +1,7 @@
 import inspect
 import unittest
 from pyquilted.app_factory import *
-from pyquilted.quilted.style import Style
+from pyquilted.quilted.style_options import StyleOptions
 
 
 class MockArgs():
@@ -15,10 +15,10 @@ class TestAppFactory(unittest.TestCase):
 
         self.assertTrue(hasattr(factory, 'args'))
         self.assertTrue(hasattr(factory, 'options'))
-        self.assertTrue(hasattr(factory, 'style'))
+        self.assertTrue(hasattr(factory, 'style_options'))
 
         self.assertTrue(isinstance(factory.args, dict))
-        self.assertTrue(isinstance(factory.style, dict))
+        self.assertTrue(isinstance(factory.style_options, dict))
         self.assertTrue(isinstance(factory.options, AppOptions))
 
         self.assertTrue(inspect.ismethod(factory.create))
