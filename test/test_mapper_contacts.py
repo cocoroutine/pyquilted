@@ -1,5 +1,5 @@
 import unittest
-from pyquilted.mapper.contacts import ContactsMapper
+from pyquilted.builder.contacts import ContactsMapper
 from pyquilted.yaml_loader import YamlLoader
 
 

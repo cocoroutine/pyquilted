@@ -1,5 +1,5 @@
 import unittest
-from pyquilted.mapper.work import WorkMapper
+from pyquilted.builder.work import WorkMapper
 from pyquilted.yaml_loader import YamlLoader
 
 

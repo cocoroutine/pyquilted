@@ -1,5 +1,5 @@
 from pyquilted.quilted.resume import Resume
-from pyquilted.mapper.section import SectionMapper
+from pyquilted.builder.section import SectionMapper
 
 
 class ResumeBuilder:

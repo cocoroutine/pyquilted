@@ -1,5 +1,5 @@
 import unittest
-from pyquilted.mapper.education import EducationMapper
+from pyquilted.builder.education import EducationMapper
 from pyquilted.yaml_loader import YamlLoader
 
 

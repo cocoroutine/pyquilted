@@ -1,9 +1,9 @@
-from pyquilted.mapper.contacts import ContactsMapper
-from pyquilted.mapper.education import EducationMapper
-from pyquilted.mapper.heading import HeadingMapper
-from pyquilted.mapper.projects import ProjectsMapper
-from pyquilted.mapper.skills import SkillsMapper
-from pyquilted.mapper.work import WorkMapper
+from pyquilted.builder.contacts import ContactsMapper
+from pyquilted.builder.education import EducationMapper
+from pyquilted.builder.heading import HeadingMapper
+from pyquilted.builder.projects import ProjectsMapper
+from pyquilted.builder.skills import SkillsMapper
+from pyquilted.builder.work import WorkMapper
 
 
 class SectionMapper:

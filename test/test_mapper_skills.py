@@ -1,5 +1,5 @@
 import unittest
-from pyquilted.mapper.skills import SkillsMapper
+from pyquilted.builder.skills import SkillsMapper
 from pyquilted.yaml_loader import YamlLoader
 
 
