@@ -24,11 +24,11 @@ class AppFactory:
             app = SampleApp('/sample/resume.yml', self.options.sample)
         elif self.options.html:
             app = HtmlApp(self.options.html[0], self.options.html[1],
-                          style_options=self.style,
+                          style_options=self.style_options,
                           section_options=self.section_options)
         elif self.options.pdf:
             app = PdfApp(self.options.pdf[0], self.options.pdf[1],
-                         style_options=self.style,
+                         style_options=self.style_options,
                          section_options=self.section_options)
         return app
 
