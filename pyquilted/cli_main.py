@@ -30,7 +30,7 @@ class CliMain:
         section_group = self.parser.add_argument_group(
                 'section formatting', 'section format of resume content')
         section_group.add_argument(
-                '--heading', metavar='compact|complex|auto', nargs=1,
+                '--heading', metavar='compact|complex|auto',
                 dest='heading', default='auto',
                 help="force a heading type; defaults to auto")
 
