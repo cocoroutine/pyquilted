@@ -26,7 +26,8 @@ class SectionBuilderFactory:
         elif self.key in 'education':
             self.mapper = EducationBuilder(self.section_odict)
         elif self.key in 'heading':
-            self.mapper = HeadingBuilder(self.section_odict)
+            self.mapper = HeadingBuilder(self.section_odict,
+                                         heading_type=self.options.heading)
         elif self.key in 'projects':
             self.mapper = ProjectsBuilder(self.section_odict)
         elif self.key in 'skills':
@@ -38,4 +39,4 @@ class SectionBuilderFactory:
 class SectionOptions:
     """section builder options for the formatting of the sections"""
     def __init__(self, heading=None, **kwargs):
-        self.heading = heading or "auto"
+        self.heading = heading or 'auto'
