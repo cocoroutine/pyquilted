@@ -10,7 +10,7 @@ class CliMain:
                 prog='pyquilted',
                 description="pyquilted --pdf input.yml output.pdf")
         self._args_pyquilted()
-        self._args_formatting()
+        self._args_section()
         self._args_style()
 
     def _args_pyquilted(self):
