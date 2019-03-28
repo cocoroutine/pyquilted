@@ -3,7 +3,7 @@ from pyquilted.quilted.contact import *
 from pyquilted.quilted.contacts_list import ContactsList
 
 
-class TestContacts(unittest.TestCase):
+class TestContactsList(unittest.TestCase):
     def test_contact_list(self):
         contacts = ContactsList()
         email = EmailContact('jon.snow@winterfell.got')

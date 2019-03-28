@@ -2,7 +2,7 @@ import unittest
 from pyquilted.quilted.contact import *
 
 
-class TestContacts(unittest.TestCase):
+class TestContact(unittest.TestCase):
     def test_email_contact(self):
         email = EmailContact('jon.snow@winterfell.got')
         valid = {

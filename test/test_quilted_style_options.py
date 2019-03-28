@@ -2,7 +2,7 @@ import unittest
 from pyquilted.quilted.style_options import StyleOptions
 
 
-class TestStyle(unittest.TestCase):
+class TestStyleOptions(unittest.TestCase):
     def test_style_defaults(self):
         style = StyleOptions()
         self.assertEqual(style.page_height, "9in")
