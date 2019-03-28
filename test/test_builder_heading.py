@@ -33,7 +33,14 @@ class TestBuilderHeading(unittest.TestCase):
         self.assertIsNotNone(heading.adjacent)
 
     def test_heading_complex(self):
-        pass
+        mapper = HeadingBuilder(self.odata['heading-complex'])
+        heading = mapper.deserialize()
+
+        self.assertIsNotNone(heading.name)
+        self.assertIsNotNone(heading.primary)
+        self.assertIsNotNone(heading.adjacent)
+        self.assertIsNotNone(heading.top_side)
+        self.assertIsNotNone(heading.bottom_side)
 
 
 if __name__ == '__main__':
