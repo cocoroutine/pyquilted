@@ -1,12 +1,18 @@
+#Heading
 heading:
     name: Jon Snow # required
     title: Python Developer # optional
     location: NYC # recommended—a major metro area
     via: motorcycle # location—your form of travel ex. car, bus, subway
+    objective: Seeking position where I can vanquish evil and destroy my enemies. # optional
+    flair: http://coroutine.co # optional
+    flair_icon: fa-globe # optional
+    flair_link: http://coroutine.co # optional
 
-# skills an ordered comma separated list Cap-cased
+# Skills an ordered comma separated list Cap-cased
 skills: [ Bravery, Brooding, Knowing-Nothing, Leadership, Swordsmanship, SQL]
 
+# Work Experience
 work:
     # a job block
     Coroutine: # company name
@@ -34,22 +40,26 @@ work:
     other:
         - Swordsmanship training at Winterfell
 
+# Project Experience
 projects:
     # an activity block
     Wight Hunt:
         description: An AR training program to play fight against Wights
         flair: jonsnowegot/wighthunt
         flair_icon: fa-github
+        flair_link: http://coroutine.co
         slugs:
             - Written using AI machine learning prototype DeepHole
             - Sword or not sword image detection
 
-# education school year, degree—year optional
+# Education school year, degree—year optional
 education: The Night's Watch 2019, B.S. in BS
 
+#Contact info
 contacts:
     email: jon.snow@coroutine.co # required
     phone: '555 123 4567' # required
     social: # optional
         handle: 'jonsnowEGOT'
         sites: [ 'twitter', 'instagram', 'facebook']
+        link: http://coroutine.co

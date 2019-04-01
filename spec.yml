@@ -74,18 +74,19 @@ mapping:
                     sequence:
                         - type: str
     "projects":
+        type: map
+        required: false
+        mapping:
+            "project_name":
             type: map
-            required: false
+            required: true
             mapping:
-                "name":
-                    type: str
-                    required: true
                 "description":
                     type: str
                     required: true
                 "flair":
                     type: str
-                    required: false 
+                    required: false
                 "flair_icon":
                     type: str
                     required: false
@@ -119,3 +120,6 @@ mapping:
                         required: true
                         sequence:
                             - type: str
+                    "link":
+                        type: str
+                        required: false
