@@ -1,5 +1,5 @@
 from pathlib import Path
-import chevron
+from pystache.renderer import Renderer
 import pyquilted
 
 
@@ -10,7 +10,6 @@ class TemplateRender:
     """A wrapper class that wraps rendering of mustache templates"""
     @staticmethod
     def render_mustache(template, data):
-        with open(template) as f:
-            html = chevron.render(template=f, data=data,
-                                  partials_path=DATA_PATH + '/templates')
+        pystache = Renderer(search_dirs=DATA_PATH + '/templates')
+        html = pystache.render_path(template, data)
         return html
