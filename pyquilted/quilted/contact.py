@@ -18,7 +18,7 @@ class PhoneContact:
         self.label = 'phone'
         self.value = phone  # need to validate
         self.icons = icons or ['fa-phone']
-        self.link = 'tel:' + self.to_digits()
+        self.link = 'tel:+1' + self.to_digits()
 
     def to_digits(self):
         return ''.join(i for i in self.value if i.isdigit())
