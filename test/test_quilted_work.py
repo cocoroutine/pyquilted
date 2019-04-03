@@ -3,40 +3,43 @@ from pyquilted.quilted.work import *
 
 
 class TestWork(unittest.TestCase):
+    def setUp(self):
+        self.slugs = Slugs()
+        self.job = Job()
+        self.work = Work()
+        self.history = History()
+        self.history_x = History(previously=['company'])
+
+
+    def test_slugs(self):
+        self.assertTrue(hasattr(self.slugs, 'blocks'))
+
+    def test_job(self):
+        self.assertTrue(hasattr(self.job, 'dates'))
+        self.assertTrue(hasattr(self.job, 'location'))
+        self.assertTrue(hasattr(self.job, 'company'))
+        self.assertTrue(hasattr(self.job, 'title'))
+        self.assertTrue(hasattr(self.job, 'history'))
+        self.assertTrue(hasattr(self.job, 'slugs'))
+
     def test_work(self):
-        data = {
-                'dates': 'Jan 2017–Dec 2017',
-                'location': 'The Wall, KoN',
-                'company': 'The Night\'s Watch',
-                'title': 'Lord Commander',
-                'slugs': [
-                    'United Wildlings and The Night\'s Watch',
-                    'Youngest Lord Commander',
-                    'Died for my people yo'
-                    ]
-                }
-        job = Job(**data)
-        work = Work()
-        work.add_job(job)
-        valid = {
-                'work': {
-                    'label': 'Work',
-                    'icon': 'fa-briefcase',
-                    'blocks': [
-                        {
-                            'dates': 'Jan 2017–Dec 2017',
-                            'location': 'The Wall, KoN',
-                            'company': 'The Night\'s Watch',
-                            'title': 'Lord Commander',
-                            'slugs': [
-                                'United Wildlings and The Night\'s Watch',
-                                'Youngest Lord Commander',
-                                'Died for my people yo'
-                             ]
-                        }]
-                    }
-                }
-        self.assertEqual(work.serialize(), valid)
+        self.assertTrue(hasattr(self.work, 'label'))
+        self.assertTrue(hasattr(self.work, 'icon'))
+        self.assertTrue(hasattr(self.work, 'blocks'))
+        self.assertTrue(hasattr(self.work, 'add_job'))
+        self.assertTrue(hasattr(self.work, 'add_slugs'))
+
+        self.assertTrue(callable(self.work.add_job))
+        self.assertTrue(callable(self.work.add_slugs))
+
+    def test_history(self):
+        self.assertTrue(hasattr(self.history, 'previously'))
+        self.assertTrue(hasattr(self.history, 'to_dict'))
+        self.assertTrue(callable(self.history.to_dict))
+
+    def test_history_to_dict(self):
+        self.assertIsNone(self.history.to_dict())
+        self.assertIsNotNone(self.history_x.to_dict())
 
 
 if __name__ == '__main__':
