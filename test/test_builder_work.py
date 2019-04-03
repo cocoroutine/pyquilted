@@ -24,7 +24,8 @@ class TestBuilderWork(unittest.TestCase):
                                 'United Wildlings and The Night\'s Watch',
                                 'Youngest Lord Commander',
                                 'Died for my people yo'
-                             ]
+                             ],
+                            'history': None
                         }]
                     }
                 }

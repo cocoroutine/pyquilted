@@ -19,17 +19,20 @@ class TestContactsList(unittest.TestCase):
                 {
                     'label': 'email',
                     'value': 'jon.snow@winterfell.got',
-                    'icons': ['fa-envelope']
+                    'icons': ['fa-envelope'],
+                    'link': 'mailto:jon.snow@winterfell.got'
                 },
                 {
                     'label': 'phone',
                     'value': '555-123-4567',
-                    'icons': ['fa-phone']
+                    'icons': ['fa-phone'],
+                    'link': 'tel:+15551234567'
                 },
                 {
                     'label': 'social',
                     'value': '@jonsnow',
-                    'icons': ['fa-twitter', 'fa-instagram']
+                    'icons': ['fa-twitter', 'fa-instagram'],
+                    'link': None 
                 }
                 ]
         self.assertEqual(contacts.serialize(), valid)

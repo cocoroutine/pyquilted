@@ -30,7 +30,8 @@ class TestResume(unittest.TestCase):
                 {
                     'label': 'email',
                     'value': 'jon.snow@winterfell.got',
-                    'icons': ['fa-envelope']
+                    'icons': ['fa-envelope'],
+                    'link': 'mailto:jon.snow@winterfell.got'
                 }
                 ]
         self.assertIsInstance(resume.contacts, list)

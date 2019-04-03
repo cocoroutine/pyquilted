@@ -39,7 +39,7 @@ class TestContact(unittest.TestCase):
         self.assertIsNotNone(self.phone.link)
 
         self.assertIsInstance(self.phone.icons, list)
-        self.assertEqual(self.phone.link, 'tel:5551234567')
+        self.assertEqual(self.phone.link, 'tel:+15551234567')
 
     def test_social_contact(self):
         self.assertTrue(hasattr(self.social, 'label'))
