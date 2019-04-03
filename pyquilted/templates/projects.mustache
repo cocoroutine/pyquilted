@@ -4,18 +4,13 @@
     </div>
     {{#blocks}}
     <div class="block projects">
-        <div class="activity-name">{{name}}</div>
-        <div class="activity-flair">{{flair}}&nbsp;&nbsp;<i class="fa {{flair_icon}}"></i></div>
-        <div class="activity-description">{{description}}</div>
+        <div class="activity">
+        {{#link}}<a href="{{.}}">{{/link}}
+        {{#icon}}<i class="fa {{.}}"></i>&nbsp;&nbsp;{{/icon}}{{name}}&mdash;{{description}}</div>
+        {{#link}}</a>{{/link}}
         {{#slugs}}
         <div class="activity-slug">&mdash;{{.}}</div>
         {{/slugs}}
     </div>
     {{/blocks}}
-    {{#groups}}
-    <div class="block projects">
-        <div class="project-flair"><i class="fa fa-github">&nbsp;&nbsp;</i></div>
-        <div class="project-description">{{name}}&mdash;{{description}}</div>
-    </div>
-    {{/groups}}
 </div>

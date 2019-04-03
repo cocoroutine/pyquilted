@@ -18,11 +18,10 @@ class Projects(Section):
 
 class Activity:
     """The activity block in the project section"""
-    def __init__(self, name=None, description=None, slugs=None, flair=None,
-                 flair_icon=None, flair_link=None, **kwargs):
+    def __init__(self, name=None, description=None, icon=None,
+                 link=None, slugs=None, **kwargs):
         self.name = name
-        self.flair = flair
-        self.flair_icon = flair_icon
-        self.flair_link = flair_link
         self.description = description
+        self.icon = icon
+        self.link = link
         self.slugs = slugs

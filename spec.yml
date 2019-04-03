@@ -84,13 +84,10 @@ mapping:
                 "description":
                     type: str
                     required: true
-                "flair":
+                "icon":
                     type: str
                     required: false
-                "flair_icon":
-                    type: str
-                    required: false
-                "flair_link":
+                "link":
                     type: str
                     required: false
                 "slugs":

@@ -45,9 +45,8 @@ projects:
     # an activity block
     Wight Hunt:
         description: An AR training program to play fight against Wights
-        flair: jonsnowegot/wighthunt
-        flair_icon: fa-github
-        flair_link: http://coroutine.co
+        icon: fa-github
+        link: http://coroutine.co
         slugs:
             - Written using AI machine learning prototype DeepHole
             - Sword or not sword image detection
