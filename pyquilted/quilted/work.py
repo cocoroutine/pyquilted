@@ -23,15 +23,26 @@ class Work(Section):
 class Job:
     """The job block in the work section"""
     def __init__(self, dates=None, location=None, company=None, title=None,
-                 slugs=None, **kwargs):
+                 slugs=None, previously=None, **kwargs):
         self.dates = dates
         self.location = location
         self.company = company
         self.title = title
         self.slugs = slugs
+        self.history = History(previously=previously).to_dict()
 
 
 class Slugs():
     """The additional list of slugs in the work section"""
     def __init__(self, slugs=None):
         self.blocks = slugs
+
+
+class History():
+    def __init__(self, previously=None):
+        self.previously = previously
+
+    def to_dict(self):
+        if self.previously:
+            return vars(self)
+        return None
