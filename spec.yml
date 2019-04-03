@@ -47,12 +47,6 @@ mapping:
             type: map
             required: true 
             mapping:
-                "date_start":
-                    type: date
-                    required: true
-                "date_end":
-                    type: date
-                    required: true
                 "dates":
                     type: str
                     required: true
@@ -64,10 +58,9 @@ mapping:
                     required: true
                 "previously":
                     type: str
-                    required: true
-                "currently":
-                    type: str
-                    required: true
+                    required: false
+                    sequence:
+                        - type: str
                 "slugs":
                     type: seq
                     required: true
