@@ -1,3 +1,6 @@
+from pyquilted.quilted.iconify import Iconify
+
+
 class Detail:
     def serialize(self):
         name = self.__class__.__name__ + '-detail'
@@ -6,10 +9,10 @@ class Detail:
         return detail
 
 
-class Location(Detail):
+class Location(Detail, Iconify):
     def __init__(self, location=None, via=None, **kwargs):
         self.location = location
-        self.via = 'fa-' + via
+        self.via = self.iconify(value=via)
 
 
 class Flair(Detail):

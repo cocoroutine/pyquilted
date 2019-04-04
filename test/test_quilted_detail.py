@@ -15,9 +15,13 @@ class TestDetail(unittest.TestCase):
         self.assertTrue(hasattr(self.mock, 'serialize'))
 
     def test_detail_location(self):
-        detail = Location(location='Boston', via='car')
+        detail = Location()
         self.assertTrue(hasattr(detail, 'location'))
         self.assertTrue(hasattr(detail, 'via'))
+
+    def test_detail_location_greater(self):
+        detail_greater = Location(location='Greater Boston')
+        self.assertIsNone(detail_greater.via)
 
     def test_detail_flair(self):
         detail = Flair()
