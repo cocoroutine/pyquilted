@@ -29,11 +29,17 @@ class CliMain:
     def _args_section(self):
         section_group = self.parser.add_argument_group('section formatting')
         section_group.add_argument(
-                '--heading', metavar='"compact|complex|auto"',
-                dest='heading', default='auto')
+                '--heading-compact', dest='heading_compact',
+                default=False, action='store_true',
+                help="use a compact heading format defaults to auto")
+
+        section_group.add_argument(
+                '--heading-expanded', dest='heading_expanded',
+                default=False, action='store_true',
+                help="use an expanded heading format defaults to auto")
 
         section_group.add_argument( '--skills-table', dest='skills_table',
-                default='False', action='store_true', 
+                default=False, action='store_true',
                 help="use a skills table to show many skills")
 
     def _args_style(self):
