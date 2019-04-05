@@ -32,7 +32,8 @@ class SectionBuilderFactory:
             self.mapper = ProjectsBuilder(self.section_odict)
         elif self.key in 'skills':
             self.mapper = SkillsBuilder(self.section_odict,
-                                        table=self.options.skills_table)
+                                        table=self.options.skills_table,
+                                        sorting=self.options.sorting)
         elif self.key in 'work':
             self.mapper = WorkBuilder(self.section_odict)
 
@@ -40,8 +41,9 @@ class SectionBuilderFactory:
 class SectionOptions:
     """section builder options for the formatting of the sections"""
     def __init__(self, heading_compact=False, heading_expanded=False,
-            skills_table=False, **kwargs):
+            skills_table=False, sorting=True, **kwargs):
         self.skills_table = skills_table
+        self.sorting = sorting
         self._set_heading(heading_expanded, heading_compact)
 
     def _set_heading(self, expanded, compact):

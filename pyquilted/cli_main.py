@@ -42,6 +42,10 @@ class CliMain:
                 default=False, action='store_true',
                 help="use a skills table to show many skills")
 
+        section_group.add_argument( '--no-sorting', dest='sorting',
+                default=True, action='store_false',
+                help="don't sort your skills alphabetically")
+
     def _args_style(self):
         style_group = self.parser.add_argument_group(
                 'style', 'css styles to apply to resume content')
