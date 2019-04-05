@@ -39,6 +39,15 @@ class SectionBuilderFactory:
 
 class SectionOptions:
     """section builder options for the formatting of the sections"""
-    def __init__(self, heading=None, skills_table=False, **kwargs):
-        self.heading = heading or 'auto'
+    def __init__(self, heading_compact=False, heading_expanded=False,
+            skills_table=False, **kwargs):
         self.skills_table = skills_table
+        self._set_heading(heading_expanded, heading_compact)
+
+    def _set_heading(self, expanded, compact):
+        if expanded:
+            self.heading = 'complex'
+        elif compact:
+            self.heading = 'compact'
+        else:
+            self.heading = 'auto'

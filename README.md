@@ -54,6 +54,12 @@ Convert your yaml file to a quilted resume pdf
 
 ```bash
 
+section formatting:
+--heading-compact     use a compact heading format defaults to auto
+--heading-expanded    use an expanded heading format defaults to auto
+--skills-table        use a skills table to show many skills
+
+
 style: css styles to apply to resume content
 
 --color         "color|#rgb"    css color code for your name
