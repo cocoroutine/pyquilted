@@ -31,12 +31,14 @@ class SectionBuilderFactory:
         elif self.key in 'projects':
             self.mapper = ProjectsBuilder(self.section_odict)
         elif self.key in 'skills':
-            self.mapper = SkillsBuilder(self.section_odict)
+            self.mapper = SkillsBuilder(self.section_odict,
+                                        table=self.options.skills_table)
         elif self.key in 'work':
             self.mapper = WorkBuilder(self.section_odict)
 
 
 class SectionOptions:
     """section builder options for the formatting of the sections"""
-    def __init__(self, heading=None, **kwargs):
+    def __init__(self, heading=None, skills_table=False, **kwargs):
         self.heading = heading or 'auto'
+        self.skills_table = skills_table

@@ -126,6 +126,16 @@
                 text-decoration: none;
                 color: inherit;
             }
+            table {
+                width: 100%;
+                font-family: {{font_main}};
+                font-weight: normal;
+                font-size: {{font_size}};
+                color: #333333;
+                line-height: 175%;
+                letter-spacing: normal;
+                white-space: nowrap;
+            }
         </style>
         {{/style}}
     </head>
@@ -137,6 +147,7 @@
         {{#sections}}
 
         {{#skills}}{{>skills}}{{/skills}}
+        {{#skills-table}}{{>skills-table}}{{/skills-table}}
         {{#education}}{{>education}}{{/education}}
         {{#work}}{{>work}}{{/work}}
         {{#projects}}{{>projects}}{{/projects}}

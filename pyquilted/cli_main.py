@@ -32,6 +32,10 @@ class CliMain:
                 '--heading', metavar='"compact|complex|auto"',
                 dest='heading', default='auto')
 
+        section_group.add_argument( '--skills-table', dest='skills_table',
+                default='False', action='store_true', 
+                help="use a skills table to show many skills")
+
     def _args_style(self):
         style_group = self.parser.add_argument_group(
                 'style', 'css styles to apply to resume content')
