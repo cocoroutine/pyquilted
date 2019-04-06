@@ -20,3 +20,4 @@ class Skills(Section, Sorted):
         self.label = 'Skills'
         self.value = ", ".join(self.sort_list(skills))
         self.icon = icon or "fa-wrench"
+        self.compact = True

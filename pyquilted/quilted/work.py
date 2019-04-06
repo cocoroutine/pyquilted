@@ -12,6 +12,7 @@ class Work(Section):
         self.label = 'Work'
         self.icon = icon or 'fa-briefcase'
         self.blocks = blocks or []
+        self.compact = False
 
     def add_job(self, job):
         self.blocks.append(vars(job))

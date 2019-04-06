@@ -12,3 +12,4 @@ class Education(Section):
         self.label = 'Education'
         self.value = education
         self.icon = icon or "fa-graduation-cap"
+        self.compact = True

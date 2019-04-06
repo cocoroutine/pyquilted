@@ -44,7 +44,11 @@ class CliMain:
 
         section_group.add_argument( '--no-sorting', dest='sorting',
                 default=True, action='store_false',
-                help="don't sort your skills alphabetically")
+                help="disable sorting skills alphabetically")
+
+        section_group.add_argument( '--no-grouping', dest='grouping',
+                default=True, action='store_false',
+                help="disable grouping of compact sections")
 
     def _args_style(self):
         style_group = self.parser.add_argument_group(

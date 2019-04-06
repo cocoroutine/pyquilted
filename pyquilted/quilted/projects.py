@@ -11,6 +11,7 @@ class Projects(Section):
         self.label = 'Projects'
         self.icon = icon or "fa-code"
         self.blocks = blocks or []
+        self.compact = False
 
     def add_activity(self, activity):
         self.blocks.append(vars(activity))
