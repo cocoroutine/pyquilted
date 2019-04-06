@@ -7,17 +7,19 @@ class TestSectionOptions(unittest.TestCase):
         self.options = SectionOptions()
         self.options_compact = SectionOptions(heading_compact=True)
         self.options_expanded = SectionOptions(heading_expanded=True)
-        self.options_both = SectionOptions(heading_compact=True, 
+        self.options_both = SectionOptions(heading_compact=True,
                                            heading_expanded=True)
 
     def test_section_options_default(self):
         self.assertTrue(hasattr(self.options, 'heading'))
         self.assertTrue(hasattr(self.options, 'sorting'))
         self.assertTrue(hasattr(self.options, 'skills_table'))
+        self.assertTrue(hasattr(self.options, 'grouping'))
 
         self.assertEqual(self.options.heading, 'auto')
         self.assertTrue(self.options.sorting)
         self.assertFalse(self.options.skills_table)
+        self.assertTrue(self.options.grouping)
 
     def test_section_options_compact(self):
         self.assertEqual(self.options_compact.heading, 'compact')

@@ -4,7 +4,7 @@ from pyquilted.yaml_loader import YamlLoader
 
 
 class TestBuilderEducation(unittest.TestCase):
-    def test_mapper_education(self):
+    def test_builder_education(self):
         with open('test/validations/education.yml') as f:
             odata = YamlLoader.ordered_load(f)
         mapper = EducationBuilder(odata['education'])
@@ -14,7 +14,8 @@ class TestBuilderEducation(unittest.TestCase):
                 "education": {
                     "label": "Education",
                     "value": "The Night's Watch",
-                    "icon": "fa-graduation-cap"
+                    "icon": "fa-graduation-cap",
+                    "compact": True
                     }
                 }
         self.assertEqual(education.serialize(), valid)

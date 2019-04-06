@@ -29,6 +29,7 @@ class TestWork(unittest.TestCase):
         self.assertTrue(hasattr(self.work, 'add_job'))
         self.assertTrue(hasattr(self.work, 'add_slugs'))
 
+        self.assertFalse(self.work.compact)
         self.assertTrue(callable(self.work.add_job))
         self.assertTrue(callable(self.work.add_slugs))
 

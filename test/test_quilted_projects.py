@@ -22,6 +22,7 @@ class TestProjects(unittest.TestCase):
         self.assertTrue(hasattr(self.projects, 'add_activity'))
         self.assertTrue(callable(self.projects.add_activity))
 
+        self.assertFalse(self.projects.compact)
         self.assertEqual(self.projects.label, 'Projects')
         self.assertEqual(self.projects.icon, 'fa-code')
         self.assertIsInstance(self.projects.blocks, list)

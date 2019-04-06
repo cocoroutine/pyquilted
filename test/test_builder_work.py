@@ -26,7 +26,8 @@ class TestBuilderWork(unittest.TestCase):
                                 'Died for my people yo'
                              ],
                             'history': None
-                        }]
+                        }],
+                    'compact': False
                     }
                 }
         self.assertEqual(work.serialize(), valid)

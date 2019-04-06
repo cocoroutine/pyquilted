@@ -4,7 +4,7 @@ from pyquilted.yaml_loader import YamlLoader
 
 
 class TestBuilderProjects(unittest.TestCase):
-    def test_mapper_projects(self):
+    def test_builder_projects(self):
         with open('test/validations/projects.yml') as f:
             data = YamlLoader.ordered_load(f)
         mapper = ProjectsBuilder(data['projects'])
@@ -21,7 +21,8 @@ class TestBuilderProjects(unittest.TestCase):
                         'icon': 'fa-film',
                         'link': None,
                         'slugs': ['Mission complete', 'Saved by my uncle']
-                    }]
+                    }],
+                    'compact': False
                 }}
         self.assertEqual(projects.serialize(), valid)
 

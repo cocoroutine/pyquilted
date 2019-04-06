@@ -47,7 +47,8 @@ class TestResume(unittest.TestCase):
                     "education": {
                         "label": "Education",
                         "value": "The Night's Watch",
-                        "icon": "fa-graduation-cap"
+                        "icon": "fa-graduation-cap",
+                        "compact": True
                     }
                 }
                 ]
