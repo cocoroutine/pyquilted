@@ -16,7 +16,7 @@ class TestGroup(unittest.TestCase):
         self.assertTrue(callable(self.group.get_sections))
 
     def test_group_add_section(self):
-        self.group.add_section({'one':1})
+        self.group.add_section({'one': 1})
         self.assertEqual(len(self.group.blocks), 1)
 
     def test_group_get_section_single(self):
@@ -26,8 +26,8 @@ class TestGroup(unittest.TestCase):
         self.assertTrue('one' in sblocks)
 
     def test_group_get_section_more(self):
-        self.group.add_section({'one':1})
-        self.group.add_section({'two':2})
+        self.group.add_section({'one': 1})
+        self.group.add_section({'two': 2})
         mblocks = self.group.get_sections()
 
         self.assertTrue('group' in mblocks)

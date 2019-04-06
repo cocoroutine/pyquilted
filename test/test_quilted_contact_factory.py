@@ -20,7 +20,8 @@ class TestContactsFactory(unittest.TestCase):
 
     def test_contact_factory_social(self):
         social = self.factory.create('social',
-                {'handle':'@jonsnow', 'sites':['twitter']})
+                                     {'handle': '@jonsnow',
+                                      'sites': ['twitter']})
         self.assertIsInstance(social, SocialContact)
 
 

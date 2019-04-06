@@ -63,7 +63,6 @@ class HeadingBuilder:
         elif self.format == 'complex':
             self.section = HeadingComplex(name=self.heading.name)
 
-
     def _build_heading_simple(self):
         if len(self.heading.details) >= 2:
             self.section = HeadingSimple(name=self.heading.name,

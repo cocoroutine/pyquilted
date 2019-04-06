@@ -38,17 +38,19 @@ class CliMain:
                 default=False, action='store_true',
                 help="use an expanded heading format defaults to auto")
 
-        section_group.add_argument( '--skills-table', dest='skills_table',
-                default=False, action='store_true',
-                help="use a skills table to show many skills")
+        section_group.add_argument('--skills-table', dest='skills_table',
+                                   default=False, action='store_true',
+                                   help="use a skills table to show "
+                                        "many skills")
 
-        section_group.add_argument( '--no-sorting', dest='sorting',
-                default=True, action='store_false',
-                help="disable sorting skills alphabetically")
+        section_group.add_argument('--no-sorting', dest='sorting',
+                                   default=True, action='store_false',
+                                   help="disable sorting skills "
+                                   "alphabetically")
 
-        section_group.add_argument( '--no-grouping', dest='grouping',
-                default=True, action='store_false',
-                help="disable grouping of compact sections")
+        section_group.add_argument('--no-grouping', dest='grouping',
+                                   default=True, action='store_false',
+                                   help="disable grouping of compact sections")
 
     def _args_style(self):
         style_group = self.parser.add_argument_group(

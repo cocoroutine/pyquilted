@@ -10,7 +10,6 @@ class TestWork(unittest.TestCase):
         self.history = History()
         self.history_x = History(previously=['company'])
 
-
     def test_slugs(self):
         self.assertTrue(hasattr(self.slugs, 'blocks'))
 

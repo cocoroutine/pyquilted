@@ -30,11 +30,11 @@ class TestTable(unittest.TestCase):
 
     def test_column_to_dict(self):
         self.columns.add_item("one")
-        valid_one = {"cols":["one", "empty", "empty"]}
+        valid_one = {"cols": ["one", "empty", "empty"]}
         self.assertEqual(self.columns.to_dict(), valid_one)
 
         self.columns.add_item("two")
-        valid_two = {"cols":["one", "two", "empty"]}
+        valid_two = {"cols": ["one", "two", "empty"]}
         self.assertEqual(self.columns.to_dict(), valid_two)
 
     def test_table(self):

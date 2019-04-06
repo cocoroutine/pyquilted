@@ -9,6 +9,6 @@ class Section:
         return section
 
     def _kebab_name(self):
-        matches= re.findall('[A-Z][^A-Z]*', str(self.__class__.__name__))
+        matches = re.findall('[A-Z][^A-Z]*', str(self.__class__.__name__))
         name = '-'.join(matches).lower()
         return name

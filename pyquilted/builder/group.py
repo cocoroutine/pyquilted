@@ -33,8 +33,6 @@ class GroupBuilder:
             return True
         return False
 
-
-
     def _update_resume(self):
         if len(self.grouped) < len(self.resume.sections):
             self.resume.sections = self.grouped

@@ -14,7 +14,6 @@ class TestSkills(unittest.TestCase):
         self.assertTrue(hasattr(self.skills, 'icon'))
         self.assertTrue(hasattr(self.skills, 'value'))
 
-
         self.assertTrue(self.skills.compact)
         self.assertEqual(self.skills.value, 'disco, karate, parkour')
 

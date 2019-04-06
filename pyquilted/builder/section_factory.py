@@ -41,7 +41,7 @@ class SectionBuilderFactory:
 class SectionOptions:
     """section builder options for the formatting of the sections"""
     def __init__(self, heading_compact=False, heading_expanded=False,
-            skills_table=False, sorting=True, grouping=True, **kwargs):
+                 skills_table=False, sorting=True, grouping=True, **kwargs):
         self.skills_table = skills_table
         self.sorting = sorting
         self._set_heading(heading_expanded, heading_compact)

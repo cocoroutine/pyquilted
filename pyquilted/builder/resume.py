@@ -12,7 +12,8 @@ class ResumeBuilder:
 
     def section_map(self):
         for key, val in self.resume_odict.items():
-            builder = SectionBuilderFactory(key, val, options=self.section_options)
+            builder = SectionBuilderFactory(key, val,
+                                            options=self.section_options)
             self.resume.add_section(builder.create_section())
 
         if self.section_options.grouping:

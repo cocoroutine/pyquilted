@@ -27,7 +27,7 @@ class TestBuilderContacts(unittest.TestCase):
                     'label': 'social',
                     'value': '@jonsnowEGOT',
                     'icons': ['fa-twitter', 'fa-instagram'],
-                    'link': None 
+                    'link': None
                 }
                 ]
         self.assertEqual(contacts.serialize(), valid)

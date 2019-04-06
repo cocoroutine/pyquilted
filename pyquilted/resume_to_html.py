@@ -20,7 +20,8 @@ class ResumeToHtml:
             self.resume_odict = YamlLoader.ordered_load(f)
 
     def _resume_build(self):
-        builder = ResumeBuilder(self.resume_odict, style_options=self.style_options,
+        builder = ResumeBuilder(self.resume_odict,
+                                style_options=self.style_options,
                                 section_options=self.section_options)
         self.resume = builder.section_map()
 

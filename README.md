@@ -60,7 +60,7 @@ section formatting:
 --heading-expanded    use an expanded heading format defaults to auto
 --skills-table        use a skills table to show many skills
 --no-sorting          disable skills sorting
---no-grouping         disable grouping of compact sections 
+--no-grouping         disable grouping of compact sections
 
 
 style: css styles to apply to resume content
