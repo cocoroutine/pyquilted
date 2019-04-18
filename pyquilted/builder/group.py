@@ -12,16 +12,19 @@ class GroupBuilder:
             first = list(section.keys())[0]
             if section[first]['compact']:
                 if self._last_section(section):
-                    self.grouped.append(section)
+                    if group:
+                        group.add_section(section)
+                        self.grouped.append(group.get_sections())
+                    else:
+                        self.grouped.append(section)
                 else:
                     if not group:
                         group = Group()
                     group.add_section(section)
-            elif group:
-                self.grouped.append(group.get_sections())
-                self.grouped.append(section)
-                group = None
             else:
+                if group:
+                    self.grouped.append(group.get_sections())
+                    group = None
                 self.grouped.append(section)
 
         self._update_resume()
