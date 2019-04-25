@@ -4,9 +4,13 @@
     </div>
     {{#blocks}}
     <div class="block work">
-        <div class="job-date">{{dates}}</div>
-        <div class="job-location">{{location}}</div>
-        <div class="job-description">{{title}}, {{company}}{{#history}} ( {{#previously}}<i class="fa fa-long-arrow-left"></i> {{.}} {{/previously}}){{/history}}</div>
+        {{#location}}
+        <div class="job-date">{{dates}}</div><div class="job-location">{{location}}</div>
+        {{/location}}
+        <div class="job-line">
+            <div class="job-description">{{title}}, {{company}}{{#history}} ( {{#previously}}<i class="fa fa-long-arrow-left"></i> {{.}} {{/previously}}){{/history}}</div>
+            {{^location}}<div class="job-date-compact">{{dates}}</div>{{/location}}
+        </div>
         {{#slugs}}
         <div class="job-slug">&mdash;{{.}}</div>
         {{/slugs}}
